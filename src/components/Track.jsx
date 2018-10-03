@@ -1,0 +1,32 @@
+import PropTypes from 'prop-types';
+import React from 'react';
+import Stats from './Stats';
+import Title from './Title';
+import Image from './Image';
+import ErrorBoundary from './ErrorBoundary';
+
+const Track = props => (
+  <ErrorBoundary>
+    <figure className="track">
+      <Image
+        playTrack={props.playTrack}
+        track={props}
+        url={props.artwork_url}
+      />
+      <Title title={props.title} track={props} />
+      <i
+        onClick={() => props.playTrack(props)}
+        className="track__play-icon material-icons">
+        play_arrow
+      </i>
+    </figure>
+  </ErrorBoundary>
+);
+
+Track.propTypes = {
+  artwork_url: PropTypes.string.isRequired,
+  playTrack: PropTypes.func.isRequired,
+  title: PropTypes.string.isRequired,
+};
+
+export default Track;
