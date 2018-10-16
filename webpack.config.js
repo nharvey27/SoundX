@@ -5,7 +5,7 @@ module.exports = {
   devtool: 'source-map',
   mode: 'development',
 
-  entry: ['babel-polyfill', './src/index.jsx'],
+  entry: ['@babel/polyfill', './src/index.jsx'],
   module: {
     rules: [
       {

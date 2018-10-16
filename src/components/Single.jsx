@@ -1,12 +1,13 @@
-import React from 'react';
 import { CLIENT_ID } from '../constants/auth';
+import React from 'react';
 import Stats from './Stats';
 
 class Single extends React.Component {
   componentDidMount() {
+    const trackId = this.props.location.pathname.slice(7)
     this.props.actions.trackActions.fetchSingleTrack(
       `http://api.soundcloud.com/tracks/${
-        this.props.params.id
+        trackId
       }?client_id=${CLIENT_ID}`,
     );
   }

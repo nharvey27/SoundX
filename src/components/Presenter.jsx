@@ -1,9 +1,7 @@
 import InfiniteScroll from 'react-infinite-scroller';
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { CLIENT_ID } from '../constants/auth';
 import { SONGS_ENDPOINT } from '../constants/soundcloud';
-import Image from './Image';
 import Player from './Player';
 import SearchLogic from './searchLogic';
 import Track from './Track';
@@ -22,6 +20,7 @@ class Presenter extends React.Component {
   };
 
   render() {
+    console.log(this.props)
     const { tracks, activeTrack, playing, volume, user } = this.props;
     const {
       playTrack,

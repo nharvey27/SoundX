@@ -1,8 +1,5 @@
-import PropTypes from 'prop-types';
-import React from 'react';
-import ReactDOM from 'react-dom';
 import { CLIENT_ID } from './../constants/auth';
-import Stats from './Stats';
+import React from 'react';
 import PlayerControls from './PlayerControls';
 
 class Player extends React.Component {
