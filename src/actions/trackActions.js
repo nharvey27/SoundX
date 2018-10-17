@@ -1,7 +1,5 @@
-import SC from 'soundcloud';
-import fetchAsync from '../services/fetchAsync';
 import filterArtwork from '../services/filterArtwork';
-import { CLIENT_ID } from '../constants/auth';
+import fetchAsync from '../services/fetchAsync';
 
 export function setTracks(tracks) {
   return {
