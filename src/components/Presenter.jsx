@@ -1,8 +1,8 @@
-import InfiniteScroll from 'react-infinite-scroller';
-import React from 'react';
 import { CLIENT_ID } from '../constants/auth';
 import { SONGS_ENDPOINT } from '../constants/soundcloud';
+import InfiniteScroll from 'react-infinite-scroller';
 import Player from './Player';
+import React from 'react';
 import SearchLogic from './searchLogic';
 import Track from './Track';
 

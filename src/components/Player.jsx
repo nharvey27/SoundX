@@ -1,6 +1,6 @@
 import { CLIENT_ID } from './../constants/auth';
-import React from 'react';
 import PlayerControls from './PlayerControls';
+import React from 'react';
 
 class Player extends React.Component {
   componentDidUpdate() {

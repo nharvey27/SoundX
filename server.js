@@ -1,6 +1,6 @@
-var path = require('path');
-var express = require('express');
 var app = new express();
+var express = require('express');
+var path = require('path');
 var port = process.env.PORT || 5000;
 
 if (process.env.NODE_ENV !== 'production') {

@@ -1,7 +1,7 @@
+import { setTracks } from './trackActions';
 import SC from 'soundcloud';
 import fetchAsync from '../services/fetchAsync';
 import filterArtwork from '../services/filterArtwork';
-import { setTracks } from './trackActions';
 
 export function setUser(user) {
   return {

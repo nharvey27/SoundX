@@ -1,9 +1,8 @@
+import ErrorBoundary from './ErrorBoundary';
+import Image from './Image';
 import PropTypes from 'prop-types';
 import React from 'react';
-import Stats from './Stats';
 import Title from './Title';
-import Image from './Image';
-import ErrorBoundary from './ErrorBoundary';
 
 const Track = props => (
   <ErrorBoundary>

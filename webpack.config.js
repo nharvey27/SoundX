@@ -1,4 +1,3 @@
-var SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
 var webpack = require('webpack');
 
 module.exports = {

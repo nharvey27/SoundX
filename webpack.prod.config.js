@@ -1,10 +1,10 @@
-const path = require('path');
-const webpack = require('webpack');
-
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 var CompressionPlugin = require('compression-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 const SWPrecacheWebpackPlugin = require('sw-precache-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const webpack = require('webpack');
+
 const extractSass = new ExtractTextPlugin({
   filename: 'styles.css',
   disable: process.env.NODE_ENV === 'development',

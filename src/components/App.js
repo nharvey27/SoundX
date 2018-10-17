@@ -1,9 +1,9 @@
 import { Route, Switch } from "react-router-dom";
-import React from 'react';
+import ErrorBoundary from './ErrorBoundary';
 import Nav from './Nav';
 import Presenter from './Presenter';
-import ErrorBoundary from './ErrorBoundary';
 import Single from './Single.jsx';
+import React from 'react';
 
 const App = props => {
   const reduxProps = props;
