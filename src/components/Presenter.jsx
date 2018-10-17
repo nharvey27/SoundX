@@ -20,7 +20,6 @@ class Presenter extends React.Component {
   };
 
   render() {
-    console.log(this.props)
     const { tracks, activeTrack, playing, volume, user } = this.props;
     const {
       playTrack,
