@@ -8,6 +8,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import SC from 'soundcloud';
 import store from './stores/configureStore';
+import './index.css'
 
 SC.initialize({ client_id: CLIENT_ID, redirect_uri: REDIRECT_URI });
 

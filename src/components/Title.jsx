@@ -8,7 +8,7 @@ const Title = props => (
       {props.track.user.username}
     </figcaption>
     <Link to={`track/${props.track.id}`}>
-      <figcaption className="track__title">{props.title}</figcaption>
+      <figcaption className="text-white">{props.title}</figcaption>
     </Link>
   </React.Fragment>
 );
