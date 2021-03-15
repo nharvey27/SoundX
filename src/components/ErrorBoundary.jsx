@@ -14,7 +14,7 @@ class ErrorBoundary extends Component {
   render() {
     if (this.state.hasError) {
       return (
-        <h1 style={{ textAlign: 'center' }}>
+        <h1 className="text-center">
           Oops something broke. <i className="material-icons">error_outline</i>
         </h1>
       );

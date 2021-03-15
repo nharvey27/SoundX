@@ -48,7 +48,7 @@ class Player extends React.Component {
     return (
       <aside className="player">
         <div
-          className="progress"
+          className="progress cursor-pointer"
           onClick={this.setProgress}
           role="presentation">
           <div id="progress-bar" className="progress-bar" />

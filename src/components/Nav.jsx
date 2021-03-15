@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Nav = () => (
-  <nav>
-    <ul className="nav nav-tabs text-white">
-      <li className="offset-2 nav-item">
-        <a className="nav-link text-white" href="/">
+  <nav className="">
+    <ul className="nav">
+      <li className="">
+        <a className="nav-link text-white pl-4" href="/">
           SoundX
         </a>
       </li>

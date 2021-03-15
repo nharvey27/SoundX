@@ -19,7 +19,7 @@ class Image extends React.Component {
         alt=""
         onLoad={() => this.handleLoad()}
         onClick={() => playTrack(track)}
-        className="track__image "
+        className="rounded-md m-auto"
         src={url}
       />
     );

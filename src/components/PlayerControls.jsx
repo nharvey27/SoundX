@@ -15,58 +15,58 @@ class PlayerControls extends React.Component {
       volumeUp,
     } = this.props;
     return (
-      <menu className="player__controls">
-        <div className="col-md-3 offset-md-2 col-6 player__audio-controls">
-          <span
-            className="col-xs-4"
-            onClick={() => previousTrack(index, tracks)}
-            role="button"
-            tabIndex={0}>
-            <i className="player-icon material-icons">fast_rewind</i>
-          </span>
-          <span
-            className="col-xs-4"
-            onClick={() => togglePlaying(!playing)}
-            role="button"
-            tabIndex={0}>
-            {playing ? (
-              <i className="player-icon material-icons">pause</i>
-            ) : (
-              <i className="player-icon material-icons">play_arrow</i>
-            )}
-          </span>
-          <span
-            className="col-xs-4"
-            onClick={() => nextTrack(index, tracks)}
-            role="button"
-            tabIndex={0}>
-            <i className="player-icon material-icons">fast_forward</i>
-          </span>
-        </div>
-        <div className="col-md-3 col-6">
-          <h1 className="player__title player__title__white">{track.title}</h1>
-        </div>
-
-        <div className="col-md-3 col-xs-4 d-none d-sm-inline-block">
+      <div className="grid grid-cols-3 justify-items-center">
+        <div className="">
           <i
-            className="player-icon material-icons"
+            className="material-icons cursor-pointer"
             onClick={() => volumeUp(volume)}
             role="button"
             tabIndex={0}>
             arrow_upward
           </i>
-          <span className="player__volume">
+          <span className="">
             {Math.floor(this.props.volume * 100)}
           </span>
           <i
-            className="player-icon material-icons"
+            className="material-icons cursor-pointer"
             onClick={() => volumeDown(volume)}
             role="button"
             tabIndex={0}>
             arrow_downward
           </i>
         </div>
-      </menu>
+        <div className="">
+          <h1 className="text-white">{track.title}</h1>
+        </div>
+        <div className="">
+          <span
+            className=""
+            onClick={() => previousTrack(index, tracks)}
+            role="button"
+            tabIndex={0}>
+            <i className="material-icons cursor-pointer">fast_rewind</i>
+          </span>
+          <span
+            className=""
+            onClick={() => togglePlaying(!playing)}
+            role="button"
+            tabIndex={0}>
+            {playing ? (
+              <i className="material-icons cursor-pointer">pause</i>
+            ) : (
+              <i className="material-icons cursor-pointer">play_arrow</i>
+            )}
+          </span>
+          <span
+            className=""
+            onClick={() => nextTrack(index, tracks)}
+            role="button"
+            tabIndex={0}>
+            <i className="material-icons cursor-pointer">fast_forward</i>
+          </span>
+        </div>
+      
+      </div>
     );
   }
 }

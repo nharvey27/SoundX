@@ -11,7 +11,7 @@ class Stats extends React.Component {
       comment_count,
     } = this.props.track;
     return (
-      <div className="singleTrack__stats">
+      <div className="flex justify-center">
         <div className="stat">
           <i className="material-icons">play_arrow</i>
           <span>{this.isZero(playback_count)}</span>
