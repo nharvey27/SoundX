@@ -1,33 +1,19 @@
 var webpack = require('webpack');
 
 module.exports = {
-  devtool: 'source-map',
   mode: 'development',
-
-  entry: ['@babel/polyfill', './src/index.jsx'],
+  entry: ['regenerator-runtime/runtime', './src/index.jsx'],
   module: {
     rules: [
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-      },
-      {
-        test: /\.scss/,
-        loaders: ['style-loader', 'css-loader'],
-      },
-      {
-        test: /\.css/,
-        loaders: ['style-loader', 'css-loader'],
-      },
+      {test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader'},
+      {test: /\.scss/, use: ['style-loader', 'css-loader']},
+      {test: /\.css$/i, use: ['style-loader', 'css-loader', 'postcss-loader']},
     ],
   },
   resolve: {
     extensions: ['*', '.js', '.jsx', '.scss', '.css'],
   },
   output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
     filename: 'bundle.js',
   },
   devServer: {
@@ -36,11 +22,10 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [
-    new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
   ],
   optimization: {
-    namedModules: true, // NamedModulesPlugin()
-    noEmitOnErrors: true, // NoEmitOnErrorsPlugin
+    moduleIds: 'named',
+    emitOnErrors: true,
   },
 };

@@ -15,14 +15,14 @@ class Single extends React.Component {
   render() {
     const { singleTrack } = this.props;
     return this.props.singleTrack ? (
-      <div className="col-md-12 singleTrack">
-        <span className="singleTrack__title">{singleTrack.title}</span>
+      <div className="container mx-auto text-center">
+        <span className="">{singleTrack.title}</span>
         <img
-          className="singleTrack__image image-responsive"
+          className="m-auto image-responsive"
           src={singleTrack.artwork_url.replace(/large/, 'crop')}
           alt=""
         />
-        <p className="singleTrack__description">
+        <p>
           {this.props.singleTrack.description}
         </p>
         <Stats track={singleTrack} />

@@ -45,27 +45,31 @@ class Presenter extends React.Component {
     );
     return (
       <React.Fragment>
-        <div className="col-md-8 offset-md-2">
+        <div className="grid grid-cols-11 text-black">
           <input
             placeholder="Search"
-            className="form-control"
+            className="grid-cols-4 col-start-6"
             value={this.props.search}
             onChange={this.props.updateSearch}
           />
         </div>
-        <main className="track-container col-md-8 offset-2">
+        <main className="container mx-auto mt-12">
           <InfiniteScroll
             loadMore={this.fetchSongs}
             hasMore={true || false}
-            loader={<div className="loader" />}>
+            loader={<div className="loader" />
+            }>
+              <div className="grid lg:grid-cols-6 md:grid-cols-4 gap-12">
+
             {filtedTracks.map((track, index, array) => (
-              <section className="col-md-3">
+              <section className="grid justify-center">
                 <Track playTrack={playTrack} {...track} />
               </section>
             ))}
+            </div>
           </InfiniteScroll>
         </main>
-        <div className="col-md-12">
+        <div className="">
           <Player {...playerProps} />
         </div>
       </React.Fragment>

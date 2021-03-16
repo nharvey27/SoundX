@@ -4,11 +4,11 @@ import React from 'react';
 
 const Title = props => (
   <React.Fragment>
-    <figcaption className="track__username">
+    <figcaption className="text-center text-sm pt-3">
       {props.track.user.username}
     </figcaption>
     <Link to={`track/${props.track.id}`}>
-      <figcaption className="track__title">{props.title}</figcaption>
+      <figcaption className="text-white text-center text-xs ">{props.title}</figcaption>
     </Link>
   </React.Fragment>
 );
