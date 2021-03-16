@@ -12,7 +12,7 @@ const Track = props => (
         track={props}
         url={props.artwork_url}
       />
-      <Title title={props.title} track={props} />
+      <Title title={props} track={props} />
     </figure>
   </ErrorBoundary>
 );
