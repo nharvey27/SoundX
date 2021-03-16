@@ -5,16 +5,14 @@ import React from 'react';
 import Title from './Title';
 
 const Track = props => (
-  <ErrorBoundary>
-    <figure className="track cursor-pointer ">
-      <Image
-        playTrack={props.playTrack}
-        track={props}
-        url={props.artwork_url}
-      />
-      <Title title={props} track={props} />
-    </figure>
-  </ErrorBoundary>
+  <figure className="track cursor-pointer ">
+    <Image
+      playTrack={props.playTrack}
+      track={props}
+      url={props.artwork_url}
+    />
+    <Title title={props} track={props} />
+  </figure>
 );
 
 Track.propTypes = {
