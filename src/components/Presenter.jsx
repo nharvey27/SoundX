@@ -44,7 +44,7 @@ class Presenter extends React.Component {
       track => track.title.indexOf(this.props.search) !== -1,
     );
     return (
-      <React.Fragment>
+      <>
         <div className="grid grid-cols-11 text-black">
           <input
             placeholder="Search"
@@ -72,7 +72,7 @@ class Presenter extends React.Component {
         <div className="">
           <Player {...playerProps} />
         </div>
-      </React.Fragment>
+      </>
     );
   }
 }
