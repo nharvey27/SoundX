@@ -1,6 +1,18 @@
-import React from 'react';
+import React from "react";
 
-const PlayerControls = ( { track:{title}, track, index, tracks, playing, volume, previousTrack, togglePlaying, nextTrack, volumeDown, volumeUp} ) => {
+const PlayerControls = ({
+  track: { title },
+  track,
+  index,
+  tracks,
+  playing,
+  volume,
+  previousTrack,
+  togglePlaying,
+  nextTrack,
+  volumeDown,
+  volumeUp,
+}) => {
   return (
     <div className="grid grid-cols-3 justify-items-center">
       <div className="">
@@ -8,17 +20,17 @@ const PlayerControls = ( { track:{title}, track, index, tracks, playing, volume,
           className="material-icons cursor-pointer"
           onClick={() => volumeUp(volume)}
           role="button"
-          tabIndex={0}>
+          tabIndex={0}
+        >
           arrow_upward
         </i>
-        <span className="">
-          {Math.floor(volume * 100)}
-        </span>
+        <span className="">{Math.floor(volume * 100)}</span>
         <i
           className="material-icons cursor-pointer"
           onClick={() => volumeDown(volume)}
           role="button"
-          tabIndex={0}>
+          tabIndex={0}
+        >
           arrow_downward
         </i>
       </div>
@@ -30,14 +42,16 @@ const PlayerControls = ( { track:{title}, track, index, tracks, playing, volume,
           className=""
           onClick={() => previousTrack(index, tracks)}
           role="button"
-          tabIndex={0}>
+          tabIndex={0}
+        >
           <i className="material-icons cursor-pointer">fast_rewind</i>
         </span>
         <span
           className=""
           onClick={() => togglePlaying(!playing)}
           role="button"
-          tabIndex={0}>
+          tabIndex={0}
+        >
           {playing ? (
             <i className="material-icons cursor-pointer">pause</i>
           ) : (
@@ -48,14 +62,13 @@ const PlayerControls = ( { track:{title}, track, index, tracks, playing, volume,
           className=""
           onClick={() => nextTrack(index, tracks)}
           role="button"
-          tabIndex={0}>
+          tabIndex={0}
+        >
           <i className="material-icons cursor-pointer">fast_forward</i>
         </span>
       </div>
-    
     </div>
   );
-}
-
+};
 
 export default PlayerControls;

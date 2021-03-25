@@ -1,6 +1,6 @@
-import { CLIENT_ID } from './../constants/auth';
-import PlayerControls from './PlayerControls';
-import React from 'react';
+import { CLIENT_ID } from "./../constants/auth";
+import PlayerControls from "./PlayerControls";
+import React from "react";
 
 class Player extends React.Component {
   componentDidUpdate() {
@@ -15,15 +15,15 @@ class Player extends React.Component {
     audioElement.volume = this.props.volume;
   }
 
-  setProgress = event => {
+  setProgress = (event) => {
     const audioElement = this.audio;
     const time = event.clientX / window.innerWidth;
     const { duration } = audioElement;
     audioElement.currentTime = duration * time;
   };
 
-  updateProgress = event => {
-    const progressbar = document.getElementById('progress-bar');
+  updateProgress = (event) => {
+    const progressbar = document.getElementById("progress-bar");
     progressbar.style.width = `${(100 / audio.duration) * audio.currentTime}%`;
   };
 
@@ -50,16 +50,18 @@ class Player extends React.Component {
         <div
           className="progress cursor-pointer"
           onClick={this.setProgress}
-          role="presentation">
+          role="presentation"
+        >
           <div id="progress-bar" className="progress-bar" />
         </div>
         <audio
           id="audio"
           onTimeUpdate={() => this.updateProgress()}
-          ref={audio => {
+          ref={(audio) => {
             this.audio = audio;
           }}
-          src={`${track.stream_url}?client_id=${CLIENT_ID}`}>
+          src={`${track.stream_url}?client_id=${CLIENT_ID}`}
+        >
           <track />
         </audio>
 
