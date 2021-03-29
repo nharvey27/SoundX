@@ -1,27 +1,20 @@
 import React from "react";
 
-const SearchLogic = (Component) =>
-
-  const [search, updateSearch] = useState()
-  class extends React.Component {
-    state = {
-      search: "",
-    };
-    updateSearch = (e) => {
-      this.setState({ search: e.target.value.trim() });
-    };
-
-    render() {
-      return (
-        <div>
-          <Component
-            {...this.props}
-            search={this.state.search}
-            updateSearch={this.updateSearch}
-          />
-        </div>
-      );
-    }
+const SearchLogic = ({ searchHandler }) => {
+  const handleSearchInputChange = (e) => {
+    searchHandler(e.target.value);
   };
+  return (
+    <div>
+      <input
+        className="text-black"
+        type="text"
+        placeholder="Search"
+        onChange={handleSearchInputChange}
+      />
+      <i type="submit" />
+    </div>
+  );
+};
 
 export default SearchLogic;
