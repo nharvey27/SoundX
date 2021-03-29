@@ -53,7 +53,7 @@ const Presenter = ({
         >
           <div className="grid lg:grid-cols-6 md:grid-cols-4 gap-12">
             {tracks.map((track, _) => (
-              <section className="grid justify-center">
+              <section key={track.id} className="grid justify-center">
                 <Track playTrack={playTrack} {...track} />
               </section>
             ))}
