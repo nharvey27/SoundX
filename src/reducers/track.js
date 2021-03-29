@@ -65,16 +65,14 @@ const setPlay = (state, action) => {
 };
 
 const sortLikes = (state, action) => {
-  var { tracks } = action;
-  var tracks = tracks.sort((a, b) => {
+  let tracks = action.tracks.sort((a, b) => {
     return b.likes_count - a.likes_count;
   });
   return { tracks };
 };
 
 const sortComments = (state, action) => {
-  var { tracks } = action;
-  var tracks = tracks.sort((a, b) => {
+  let tracks = action.tracks.sort((a, b) => {
     return b.comment_count - a.coumment_count;
   });
   return { tracks };
