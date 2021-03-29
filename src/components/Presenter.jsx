@@ -40,9 +40,9 @@ const Presenter = ({
     trackActions.fetchRandom(SONGS_ENDPOINT + CLIENT_ID);
   }, []);
 
-  function fetchSongs() {
+  const fetchSongs = () => {
     trackActions.fetchPaginationTracks(nextHref, tracks);
-  }
+  };
 
   const [search, updateSearch] = useState("");
 
