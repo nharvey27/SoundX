@@ -1,25 +1,24 @@
-var CompressionPlugin = require('compression-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
-const webpack = require('webpack');
+let CompressionPlugin = require("compression-webpack-plugin");
+const TerserPlugin = require("terser-webpack-plugin");
+const webpack = require("webpack");
 
 module.exports = {
-  devtool: 'source-map',
-  mode: 'production',
-  entry: ['regenerator-runtime/runtime', './src/index.jsx'],
+  devtool: "source-map",
+  mode: "production",
+  entry: ["regenerator-runtime/runtime", "./src/index.jsx"],
   output: {
-    filename: 'bundle.js',
+    filename: "bundle.js",
   },
   plugins: [
-
     new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('production'),
+      "process.env": {
+        NODE_ENV: JSON.stringify("production"),
       },
     }),
 
     new CompressionPlugin({
-      filename: '[path].gz[query]',
-      algorithm: 'gzip',
+      filename: "[path].gz[query]",
+      algorithm: "gzip",
       test: /\.js$|\.css$|\.html$/,
       threshold: 10240,
       minRatio: 0.8,
@@ -32,11 +31,14 @@ module.exports = {
 
   module: {
     rules: [
-      {test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader'},
-      {test: /\.css$/i,include: path.resolve(__dirname, 'src'),use: ['style-loader', 'css-loader', 'postcss-loader']},
+      { test: /\.jsx?$/, exclude: /node_modules/, use: "babel-loader" },
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.scss', '.css'],
+    extensions: ["*", ".js", ".jsx", ".scss", ".css"],
   },
 };

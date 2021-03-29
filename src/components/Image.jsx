@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const Image = ({track, url, playTrack}) => {
-  const [loaded, handleLoad] = useState(false)
+const Image = ({ track, url, playTrack }) => {
+  const [loaded, handleLoad] = useState(false);
 
-  const miniUrl = url.replace(/large/, 'mini');
-  const largeUrl = url.replace(/large/, 't300x300');
-  
-  const imageFactory = url => (
+  const miniUrl = url.replace(/large/, "mini");
+  const largeUrl = url.replace(/large/, "t300x300");
+
+  const imageFactory = (url) => (
     <img
       alt=""
       onLoad={() => handleLoad(true)}
@@ -16,7 +16,6 @@ const Image = ({track, url, playTrack}) => {
     />
   );
   return loaded ? imageFactory(largeUrl) : imageFactory(miniUrl);
-
-}
+};
 
 export default Image;

@@ -1,12 +1,28 @@
-import { CLIENT_ID } from '../constants/auth';
-import { SONGS_ENDPOINT } from '../constants/soundcloud';
-import InfiniteScroll from 'react-infinite-scroller';
-import React, { useEffect } from 'react';
-import Player from './Player';
-import Track from './Track';
+import { CLIENT_ID } from "../constants/auth";
+import { SONGS_ENDPOINT } from "../constants/soundcloud";
+import InfiniteScroll from "react-infinite-scroller";
+import React, { useEffect } from "react";
+import Player from "./Player";
+import Track from "./Track";
 
-const Presenter = ({actions:{playerActions:{previousTrack, nextTrack,togglePlaying, volumeDown, volumeUp, playTrack}, trackActions}, nextHref, tracks, activeTrack, playing, volume}) => {
-  
+const Presenter = ({
+  actions: {
+    playerActions: {
+      previousTrack,
+      nextTrack,
+      togglePlaying,
+      volumeDown,
+      volumeUp,
+      playTrack,
+    },
+    trackActions,
+  },
+  nextHref,
+  tracks,
+  activeTrack,
+  playing,
+  volume,
+}) => {
   const playerProps = {
     tracks,
     playing,
@@ -16,16 +32,16 @@ const Presenter = ({actions:{playerActions:{previousTrack, nextTrack,togglePlayi
     nextTrack,
     togglePlaying,
     volumeUp,
-    volumeDown
+    volumeDown,
   };
-  
-  useEffect(()=>  {
-    trackActions.fetchRandom(SONGS_ENDPOINT + CLIENT_ID);
-  },[]);
 
-  function fetchSongs(){ 
-    trackActions.fetchPaginationTracks(nextHref, tracks); 
-  };
+  useEffect(() => {
+    trackActions.fetchRandom(SONGS_ENDPOINT + CLIENT_ID);
+  }, []);
+
+  function fetchSongs() {
+    trackActions.fetchPaginationTracks(nextHref, tracks);
+  }
 
   return (
     <>
@@ -33,7 +49,8 @@ const Presenter = ({actions:{playerActions:{previousTrack, nextTrack,togglePlayi
         <InfiniteScroll
           loadMore={fetchSongs}
           hasMore={true || false}
-          loader={<div className="loader"/>}>
+          loader={<div className="loader" />}
+        >
           <div className="grid lg:grid-cols-6 md:grid-cols-4 gap-12">
             {tracks.map((track, _) => (
               <section className="grid justify-center">
@@ -44,10 +61,10 @@ const Presenter = ({actions:{playerActions:{previousTrack, nextTrack,togglePlayi
         </InfiniteScroll>
       </main>
       <div>
-        <Player {...playerProps}/>
+        <Player {...playerProps} />
       </div>
     </>
   );
-}
+};
 
-export default (Presenter);
+export default Presenter;

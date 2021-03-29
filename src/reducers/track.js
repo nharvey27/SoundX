@@ -9,31 +9,31 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case 'TRACKS_SET':
+    case "TRACKS_SET":
       return setTracks(state, action);
-    case 'SET_PAGINATION_TRACKS':
+    case "SET_PAGINATION_TRACKS":
       return setPaginationTracks(state, action);
-    case 'SET_PAGINATION':
+    case "SET_PAGINATION":
       return setPagination(state, action);
-    case 'SET_SINGLE_TRACK':
+    case "SET_SINGLE_TRACK":
       return setSingleTrack(state, action);
-    case 'TRACK_PLAY':
+    case "TRACK_PLAY":
       return setPlay(state, action);
-    case 'SORT_LIKES':
+    case "SORT_LIKES":
       return sortLikes(state, action);
-    case 'SORT_COMMENTS':
+    case "SORT_COMMENTS":
       return sortComments(state, action);
-    case 'TOGGLE_PLAYING':
+    case "TOGGLE_PLAYING":
       return togglePlaying(state, action.playing);
-    case 'NEXT_TRACK':
+    case "NEXT_TRACK":
       return nextTrack(state, action);
-    case 'PREVIOUS_TRACK':
+    case "PREVIOUS_TRACK":
       return previousTrack(state, action);
-    case 'VOLUME_UP':
+    case "VOLUME_UP":
       return volumeUp(state, action);
-    case 'VOLUME_DOWN':
+    case "VOLUME_DOWN":
       return volumeDown(state, action);
-    case 'SET_USER':
+    case "SET_USER":
       return setUser(state, action);
   }
   return state;
@@ -45,8 +45,8 @@ const setTracks = (state, action) => {
 };
 
 const setPaginationTracks = (state, action) => {
-  var { tracks, oldTracks } = action;
-  var newTracks = [...oldTracks, ...tracks];
+  let { tracks, oldTracks } = action;
+  let newTracks = [...oldTracks, ...tracks];
   return { ...state, tracks: newTracks };
 };
 
