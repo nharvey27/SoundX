@@ -1,16 +1,11 @@
-import ErrorBoundary from './ErrorBoundary';
-import Image from './Image';
-import PropTypes from 'prop-types';
-import React from 'react';
-import Title from './Title';
+import Image from "./Image";
+import PropTypes from "prop-types";
+import React from "react";
+import Title from "./Title";
 
-const Track = props => (
+const Track = (props) => (
   <figure className="track cursor-pointer ">
-    <Image
-      playTrack={props.playTrack}
-      track={props}
-      url={props.artwork_url}
-    />
+    <Image playTrack={props.playTrack} track={props} url={props.artwork_url} />
     <Title title={props} track={props} />
   </figure>
 );

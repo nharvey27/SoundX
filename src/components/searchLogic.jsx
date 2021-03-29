@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react";
 
-const SearchLogic = Component =>
+const SearchLogic = (Component) =>
+
+  const [search, updateSearch] = useState()
   class extends React.Component {
     state = {
-      search: '',
+      search: "",
     };
-    updateSearch = e => {
+    updateSearch = (e) => {
       this.setState({ search: e.target.value.trim() });
     };
 
