@@ -10,7 +10,6 @@ class Player extends React.Component {
     if (!audioElement) {
       return;
     }
-    const progress = audioElement.duration / audioElement.currentTime;
     playing ? audioElement.play() : audioElement.pause();
     audioElement.volume = this.props.volume;
   }
@@ -22,23 +21,13 @@ class Player extends React.Component {
     audioElement.currentTime = duration * time;
   };
 
-  updateProgress = (event) => {
+  updateProgress = () => {
     const progressbar = document.getElementById("progress-bar");
     progressbar.style.width = `${(100 / audio.duration) * audio.currentTime}%`;
   };
 
   render() {
-    const {
-      track,
-      playing,
-      togglePlaying,
-      tracks,
-      nextTrack,
-      previousTrack,
-      volumeUp,
-      volume,
-      volumeDown,
-    } = this.props;
+    const { track, tracks } = this.props;
     const index = tracks.indexOf(track);
 
     if (track === null) {
