@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
 const Nav = () => (
-  <nav className="">
+  <nav>
     <ul className="nav">
-      <li className="">
+      <li>
         <a className="nav-link text-white pl-4" href="/">
           SoundX
         </a>
