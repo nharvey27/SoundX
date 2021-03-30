@@ -4,7 +4,7 @@ import InfiniteScroll from "react-infinite-scroller";
 import React, { useEffect, useState } from "react";
 import Player from "./Player";
 import Track from "./Track";
-import SearchLogic from "./SearchLogic";
+import SearchLogic from "./searchLogic";
 
 const Presenter = ({
   actions: {
