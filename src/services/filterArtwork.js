@@ -1,3 +1,3 @@
-export default function filterArtwork(arr) {
-  return arr.filter((item) => item.artwork_url);
-}
+const filterArtwork = (arr) => arr.filter((item) => item.artwork_url);
+
+export default filterArtwork;
