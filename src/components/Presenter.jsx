@@ -46,10 +46,6 @@ const Presenter = ({
 
   const [search, updateSearch] = useState("");
 
-  const searchHandler = (value) => {
-    updateSearch(value);
-  };
-
   let filteredTracks = tracks.filter(
     (track) => track.title.indexOf(search) !== -1
   );
@@ -57,7 +53,7 @@ const Presenter = ({
   return (
     <>
       <div className="text-center">
-        <SearchLogic searchHandler={searchHandler} />
+        <SearchLogic searchHandler={(value) => updateSearch(value)} />
       </div>
 
       <main className="container mx-auto mt-12">
