@@ -35,13 +35,13 @@ class Player extends React.Component {
     }
 
     return (
-      <aside className="player">
+      <aside className="player bg-green-900">
         <div
-          className="progress cursor-pointer"
+          className="progress h-2 cursor-pointer"
           onClick={this.setProgress}
           role="presentation"
         >
-          <div id="progress-bar" className="progress-bar" />
+          <div id="progress-bar" className="progress-bar h-2 bg-purple-900" />
         </div>
         <audio
           id="audio"

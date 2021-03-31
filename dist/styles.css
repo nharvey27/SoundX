@@ -1,7 +1,7 @@
 body {
-  background: #252424 !important;
-  color: white !important;
-  font-family: 'Work Sans', sans-serif; 
+  background: #393737 !important;
+  color: white;
+  font-family: "Work Sans", sans-serif;
 }
 
 .nav {
@@ -16,7 +16,7 @@ body {
 }
 
 .material-icons {
-  color: #c62828 !important; 
+  color: #c62828 !important;
 }
 
 .material-icons ~ span {
@@ -25,26 +25,16 @@ body {
 }
 
 audio {
-  width: 100%; 
+  width: 100%;
 }
 
 .player {
-  background-color: #43434b;
   bottom: 0 !important;
   border: 1px solid black;
   position: fixed;
   width: 100%;
   height: 3.4rem;
   display: inline-grid;
-}
-
-.progress {
-  height: 8px !important;
-}
-
-.progress-bar {
-  height: 8px;
-  background-color: #8e0000 !important; 
 }
 
 .loader {
@@ -60,35 +50,35 @@ audio {
   -ms-transform: translateZ(0);
   transform: translateZ(0);
   -webkit-animation: load8 1.1s infinite linear;
-  animation: load8 1.1s infinite linear; 
+  animation: load8 1.1s infinite linear;
 }
 
 .loader,
 .loader:after {
   border-radius: 50%;
   width: 10em;
-  height: 10em; 
+  height: 10em;
 }
 
 @-webkit-keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
-   } 
   }
+}
 
 @keyframes load8 {
   0% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); 
+    transform: rotate(0deg);
   }
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg); 
-    } 
+    transform: rotate(360deg);
   }
+}
 /*# sourceMappingURL=styles.css.map*/

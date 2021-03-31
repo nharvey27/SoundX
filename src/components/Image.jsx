@@ -11,7 +11,7 @@ const Image = ({ track, url, playTrack }) => {
       alt=""
       onLoad={() => handleLoad(true)}
       onClick={() => playTrack(track)}
-      className="rounded-md m-auto"
+      className="rounded-md m-auto cursor-pointer"
       src={url}
     />
   );
