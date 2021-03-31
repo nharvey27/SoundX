@@ -4,7 +4,7 @@ import InfiniteScroll from "react-infinite-scroller";
 import React, { useEffect, useState } from "react";
 import Player from "./Player";
 import Track from "./Track";
-import SearchLogic from "./searchLogic";
+import Search from "./Search";
 
 const Presenter = ({
   actions: {
@@ -53,7 +53,7 @@ const Presenter = ({
   return (
     <>
       <div className="text-center">
-        <SearchLogic searchHandler={(value) => updateSearch(value)} />
+        <Search searchHandler={(value) => updateSearch(value)} />
       </div>
 
       <main className="container mx-auto mt-12">

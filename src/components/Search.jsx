@@ -1,6 +1,6 @@
 import React from "react";
 
-const SearchLogic = ({ searchHandler }) => {
+const Search = ({ searchHandler }) => {
   const handleSearchInputChange = (e) => {
     searchHandler(e.target.value);
   };
@@ -17,4 +17,4 @@ const SearchLogic = ({ searchHandler }) => {
   );
 };
 
-export default SearchLogic;
+export default Search;
